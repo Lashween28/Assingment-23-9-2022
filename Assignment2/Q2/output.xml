@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220925 01:27:42.765" rpa="false" schemaversion="3">
+<suite id="s1" name="Q2" source="/home/lashweenraj/Desktop/Assignment2/Q2/q2.robot">
+<test id="s1-t1" name="1.Login To Deriv" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/closing-account</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220925 01:27:42.870" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/closing-account'.</msg>
+<status status="PASS" starttime="20220925 01:27:42.870" endtime="20220925 01:27:49.235"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220925 01:27:49.236" endtime="20220925 01:27:49.345"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220925 01:27:49.346" endtime="20220925 01:27:49.346"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220925 01:27:49.347" endtime="20220925 01:27:52.530"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>lashweenraj@besquare.com.my</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220925 01:27:52.531" level="INFO">Typing text 'lashweenraj@besquare.com.my' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20220925 01:27:52.530" endtime="20220925 01:27:54.163"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Lashween28</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220925 01:27:54.165" level="INFO">Typing text 'Lashween28' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20220925 01:27:54.164" endtime="20220925 01:27:55.783"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:27:55.785" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220925 01:27:55.784" endtime="20220925 01:27:59.013"/>
+</kw>
+<status status="PASS" starttime="20220925 01:27:42.869" endtime="20220925 01:27:59.014"/>
+</test>
+<test id="s1-t2" name="2.Click to check the Policy" line="16">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="dc-text"]//child::a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:27:59.015" level="INFO">Clicking element '//*[@class="dc-text"]//child::a'.</msg>
+<status status="PASS" starttime="20220925 01:27:59.015" endtime="20220925 01:28:00.121"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220925 01:28:00.122" endtime="20220925 01:28:01.648"/>
+</kw>
+<status status="PASS" starttime="20220925 01:27:59.014" endtime="20220925 01:28:01.649"/>
+</test>
+<test id="s1-t3" name="3.Click Cancel for Closing Account" line="22">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220925 01:28:01.652" endtime="20220925 01:28:02.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:02.701" level="INFO">Clicking element '//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']'.</msg>
+<status status="PASS" starttime="20220925 01:28:02.701" endtime="20220925 01:28:03.840"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220925 01:28:03.840" endtime="20220925 01:28:04.362"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220925 01:28:04.877" level="INFO">Current page does not contain element '//button[@class='dc-btn dc-btn--secondary dc-btn__large closing-account__button--cancel']'.</msg>
+<status status="PASS" starttime="20220925 01:28:04.362" endtime="20220925 01:28:04.877"/>
+</kw>
+<status status="PASS" starttime="20220925 01:28:01.650" endtime="20220925 01:28:04.878"/>
+</test>
+<test id="s1-t4" name="4.Clicking on Close My account Button" line="31">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class="dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:04.882" level="INFO">Clicking element '//button[@class="dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account"]'.</msg>
+<msg timestamp="20220925 01:28:06.102" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:06.103" level="FAIL">Element with locator '//button[@class="dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account"]' not found.</msg>
+<status status="FAIL" starttime="20220925 01:28:04.881" endtime="20220925 01:28:06.104"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:04.879" endtime="20220925 01:28:06.105">Element with locator '//button[@class="dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account"]' not found.</status>
+</test>
+<test id="s1-t5" name="5.Selecting Reasons and checking continue(1 reason)" line="35">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I have other financial priorities.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:06.107" level="INFO">Clicking element '//span[contains(., 'I have other financial priorities.')]'.</msg>
+<msg timestamp="20220925 01:28:07.294" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:07.294" level="FAIL">Element with locator '//span[contains(., 'I have other financial priorities.')]' not found.</msg>
+<status status="FAIL" starttime="20220925 01:28:06.106" endtime="20220925 01:28:07.294"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:07.295" endtime="20220925 01:28:07.295"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:07.295" endtime="20220925 01:28:07.295"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:06.105" endtime="20220925 01:28:07.296">Element with locator '//span[contains(., 'I have other financial priorities.')]' not found.</status>
+</test>
+<test id="s1-t6" name="6.Selecting Reasons and checking continue(2 reasons)" line="43">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I want to stop myself from trading.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:07.298" level="INFO">Clicking element '//span[contains(., 'I want to stop myself from trading.')]'.</msg>
+<msg timestamp="20220925 01:28:08.606" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:08.606" level="FAIL">Element with locator '//span[contains(., 'I want to stop myself from trading.')]' not found.</msg>
+<status status="FAIL" starttime="20220925 01:28:07.298" endtime="20220925 01:28:08.607"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:08.607" endtime="20220925 01:28:08.608"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:08.608" endtime="20220925 01:28:08.608"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:07.297" endtime="20220925 01:28:08.609">Element with locator '//span[contains(., 'I want to stop myself from trading.')]' not found.</status>
+</test>
+<test id="s1-t7" name="7.Selecting Reasons,checking checkboxes and checking continue(3 reasons)" line="51">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I’m no longer interested in trading.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:08.610" level="INFO">Clicking element '//span[contains(., 'I’m no longer interested in trading.')]'.</msg>
+<msg timestamp="20220925 01:28:09.815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:09.816" level="FAIL">Element with locator '//span[contains(., 'I’m no longer interested in trading.')]' not found.</msg>
+<status status="FAIL" starttime="20220925 01:28:08.610" endtime="20220925 01:28:09.817"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:09.818" endtime="20220925 01:28:09.819"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:09.819" endtime="20220925 01:28:09.820"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='dc-checkbox__box dc-checkbox__box--disabled']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:09.820" endtime="20220925 01:28:09.820"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:08.609" endtime="20220925 01:28:09.821">Element with locator '//span[contains(., 'I’m no longer interested in trading.')]' not found.</status>
+</test>
+<test id="s1-t8" name="8. Checking “If you dont mind sharing,what other trading platforms do you use ?” textbox function" line="61">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//textarea[@name='do_to_improve']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:09.826" level="INFO">Clicking element '//textarea[@name='do_to_improve']'.</msg>
+<msg timestamp="20220925 01:28:11.105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-46.png"&gt;&lt;img src="selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:11.105" level="FAIL">Element with locator '//textarea[@name='do_to_improve']' not found.</msg>
+<status status="FAIL" starttime="20220925 01:28:09.825" endtime="20220925 01:28:11.106"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>Vanakam machi</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.107" endtime="20220925 01:28:11.107"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//textarea[@name='do_to_improve' and contains(.,'Vanakam machi')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.107" endtime="20220925 01:28:11.107"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//textarea[@name='do_to_improve' and contains(.,'Vanakam machi')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.108" endtime="20220925 01:28:11.108"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>CTRL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.108" endtime="20220925 01:28:11.108"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.108" endtime="20220925 01:28:11.108"/>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>120 times</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>Lashween</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.108" endtime="20220925 01:28:11.108"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//p[@class='dc-text closing-account-reasons__hint' and contains(.,'Remaining characters: 0')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.108" endtime="20220925 01:28:11.108"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//p[@class='dc-text closing-account-reasons__hint' and contains(.,'Remaining characters: 0')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:11.109" endtime="20220925 01:28:11.109"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:09.823" endtime="20220925 01:28:11.109">Element with locator '//textarea[@name='do_to_improve']' not found.</status>
+</test>
+<test id="s1-t9" name="9. Checking on clicking Back button" line="77">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220925 01:28:11.111" level="INFO">Clicking element '//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large']'.</msg>
+<msg timestamp="20220925 01:28:12.303" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:12.304" level="FAIL">Element with locator '//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large']' not found.</msg>
+<status status="FAIL" starttime="20220925 01:28:11.110" endtime="20220925 01:28:12.304"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:12.304" endtime="20220925 01:28:12.305"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:12.305" endtime="20220925 01:28:12.305"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:11.110" endtime="20220925 01:28:12.306">Element with locator '//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large']' not found.</status>
+</test>
+<test id="s1-t10" name="10. Proceed to Close Account after testing Back Button" line="87">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220925 01:28:23.099" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220925 01:28:23.099" level="FAIL">Element '//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20220925 01:28:12.307" endtime="20220925 01:28:23.100"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:23.101" endtime="20220925 01:28:23.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(., 'I want to stop myself from trading.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:23.103" endtime="20220925 01:28:23.103"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:12.306" endtime="20220925 01:28:23.105">Element '//button[@class='dc-btn dc-btn--primary dc-btn__large closing-account__button--close-account']' not visible after 10 seconds.</status>
+</test>
+<test id="s1-t11" name="11.Clicking on Continue button and check for Warning" line="93">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20220925 01:28:24.555" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:24.556" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220925 01:28:23.109" endtime="20220925 01:28:24.557"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.558" endtime="20220925 01:28:24.559"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.559" endtime="20220925 01:28:24.559"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.560" endtime="20220925 01:28:24.560"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:23.107" endtime="20220925 01:28:24.561">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t12" name="12. Checking Go Back button after clicking on Continue on Warning page" line="102">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large' and contains(.,'Go Back')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20220925 01:28:24.572" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:24.573" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220925 01:28:24.563" endtime="20220925 01:28:24.574"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--secondary dc-btn__large' and contains(.,'Go Back')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.574" endtime="20220925 01:28:24.574"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.574" endtime="20220925 01:28:24.574"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.575" endtime="20220925 01:28:24.575"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:24.562" endtime="20220925 01:28:24.575">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t13" name="13. Checking Close Account button working on Warning page after Clicking on Continue" line="111">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20220925 01:28:24.583" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:24.583" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220925 01:28:24.577" endtime="20220925 01:28:24.584"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.585" endtime="20220925 01:28:24.585"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.585" endtime="20220925 01:28:24.585"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[@class='account-closure-warning-modal']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.585" endtime="20220925 01:28:24.585"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large' and contains(.,'Close account')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.585" endtime="20220925 01:28:24.585"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large' and contains(.,'Close account')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.586" endtime="20220925 01:28:24.586"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//p[@class="dc-text account-closed"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:24.586" endtime="20220925 01:28:24.586"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:24.576" endtime="20220925 01:28:24.586">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t14" name="14.Login back after closing account" line="127">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/closing-account</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220925 01:28:24.588" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/closing-account'.</msg>
+<status status="PASS" starttime="20220925 01:28:24.588" endtime="20220925 01:28:30.256"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20220925 01:28:30.270" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ff64e3a403 &lt;unknown&gt;
+#1 0x55ff64c40778 &lt;unknown&gt;
+#2 0x55ff64c217f8 &lt;unknown&gt;
+#3 0x55ff64c98f6b &lt;unknown&gt;
+#4 0x55ff64ca82a5 &lt;unknown&gt;
+#5 0x55ff64c958f3 &lt;unknown&gt;
+#6 0x55ff64c6b0d8 &lt;unknown&gt;
+#7 0x55ff64c6c205 &lt;unknown&gt;
+#8 0x55ff64e81e3d &lt;unknown&gt;
+#9 0x55ff64e84db6 &lt;unknown&gt;
+#10 0x55ff64e6b13e &lt;unknown&gt;
+#11 0x55ff64e859b5 &lt;unknown&gt;
+#12 0x55ff64e5f970 &lt;unknown&gt;
+#13 0x55ff64ea2228 &lt;unknown&gt;
+#14 0x55ff64ea23bf &lt;unknown&gt;
+#15 0x55ff64ebcabe &lt;unknown&gt;
+#16 0x7f93ecf63609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:30.272" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ff64e3a403 &lt;unknown&gt;
+#1 0x55ff64c40778 &lt;unknown&gt;
+#2 0x55ff64c217f8 &lt;unknown&gt;
+#3 0x55ff64c98f6b &lt;unknown&gt;
+#4 0x55ff64ca82a5 &lt;unknown&gt;
+#5 0x55ff64c958f3 &lt;unknown&gt;
+#6 0x55ff64c6b0d8 &lt;unknown&gt;
+#7 0x55ff64c6c205 &lt;unknown&gt;
+#8 0x55ff64e81e3d &lt;unknown&gt;
+#9 0x55ff64e84db6 &lt;unknown&gt;
+#10 0x55ff64e6b13e &lt;unknown&gt;
+#11 0x55ff64e859b5 &lt;unknown&gt;
+#12 0x55ff64e5f970 &lt;unknown&gt;
+#13 0x55ff64ea2228 &lt;unknown&gt;
+#14 0x55ff64ea23bf &lt;unknown&gt;
+#15 0x55ff64ebcabe &lt;unknown&gt;
+#16 0x7f93ecf63609 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220925 01:28:30.257" endtime="20220925 01:28:30.272"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:30.273" endtime="20220925 01:28:30.273"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>lashweenraj@besquare.com.my</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:30.273" endtime="20220925 01:28:30.274"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Lashween28</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:30.274" endtime="20220925 01:28:30.274"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:30.274" endtime="20220925 01:28:30.274"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Want to start trading on Deriv again?</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:30.274" endtime="20220925 01:28:30.274"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Want to start trading on Deriv again?</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220925 01:28:30.275" endtime="20220925 01:28:30.275"/>
+</kw>
+<status status="FAIL" starttime="20220925 01:28:24.587" endtime="20220925 01:28:30.275">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ff64e3a403 &lt;unknown&gt;
+#1 0x55ff64c40778 &lt;unknown&gt;
+#2 0x55ff64c217f8 &lt;unknown&gt;
+#3 0x55ff64c98f6b &lt;unknown&gt;
+#4 0x55ff64ca82a5 &lt;unknown&gt;
+#5 0x55ff64c958f3 &lt;unknown&gt;
+#6 0x55ff64c6b0d8 &lt;unknown&gt;
+#7 0x55ff64c6c205 &lt;unknown&gt;
+#8 0x55ff64e81e3d &lt;unknown&gt;
+#9 0x55ff64e84db6 &lt;unknown&gt;
+#10 0x55ff64e6b13e &lt;unknown&gt;
+#11 0x55ff64e859b5 &lt;unknown&gt;
+#12 0x55ff64e5f970 &lt;unknown&gt;
+#13 0x55ff64ea2228 &lt;unknown&gt;
+#14 0x55ff64ea23bf &lt;unknown&gt;
+#15 0x55ff64ebcabe &lt;unknown&gt;
+#16 0x7f93ecf63609 &lt;unknown&gt;
+</status>
+</test>
+<status status="FAIL" starttime="20220925 01:27:42.766" endtime="20220925 01:28:30.276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="11" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="11" skip="0" id="s1" name="Q2">Q2</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220925 01:28:24.555" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:24.572" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:24.583" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ee0be83403 &lt;unknown&gt;
+#1 0x55ee0bc8964b &lt;unknown&gt;
+#2 0x55ee0bc79d24 &lt;unknown&gt;
+#3 0x55ee0bc6ae2e &lt;unknown&gt;
+#4 0x55ee0bc6f962 &lt;unknown&gt;
+#5 0x55ee0bc74946 &lt;unknown&gt;
+#6 0x55ee0bc8ab72 &lt;unknown&gt;
+#7 0x55ee0bcf12f1 &lt;unknown&gt;
+#8 0x55ee0bcde8f3 &lt;unknown&gt;
+#9 0x55ee0bcb40d8 &lt;unknown&gt;
+#10 0x55ee0bcb5205 &lt;unknown&gt;
+#11 0x55ee0becae3d &lt;unknown&gt;
+#12 0x55ee0becddb6 &lt;unknown&gt;
+#13 0x55ee0beb413e &lt;unknown&gt;
+#14 0x55ee0bece9b5 &lt;unknown&gt;
+#15 0x55ee0bea8970 &lt;unknown&gt;
+#16 0x55ee0beeb228 &lt;unknown&gt;
+#17 0x55ee0beeb3bf &lt;unknown&gt;
+#18 0x55ee0bf05abe &lt;unknown&gt;
+#19 0x7f287f184609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220925 01:28:30.270" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=104.0.5112.101)
+Stacktrace:
+#0 0x55ff64e3a403 &lt;unknown&gt;
+#1 0x55ff64c40778 &lt;unknown&gt;
+#2 0x55ff64c217f8 &lt;unknown&gt;
+#3 0x55ff64c98f6b &lt;unknown&gt;
+#4 0x55ff64ca82a5 &lt;unknown&gt;
+#5 0x55ff64c958f3 &lt;unknown&gt;
+#6 0x55ff64c6b0d8 &lt;unknown&gt;
+#7 0x55ff64c6c205 &lt;unknown&gt;
+#8 0x55ff64e81e3d &lt;unknown&gt;
+#9 0x55ff64e84db6 &lt;unknown&gt;
+#10 0x55ff64e6b13e &lt;unknown&gt;
+#11 0x55ff64e859b5 &lt;unknown&gt;
+#12 0x55ff64e5f970 &lt;unknown&gt;
+#13 0x55ff64ea2228 &lt;unknown&gt;
+#14 0x55ff64ea23bf &lt;unknown&gt;
+#15 0x55ff64ebcabe &lt;unknown&gt;
+#16 0x7f93ecf63609 &lt;unknown&gt;
+</msg>
+</errors>
+</robot>
